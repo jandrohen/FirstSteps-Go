@@ -2,6 +2,7 @@ package main
 
 import (
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
 	"fmt"
@@ -33,5 +34,7 @@ func main() {
 	fmt.Println(exercices.TextToConverterAndValidateAHundred("100"))
 
 	keyboard.InsertNumbers()
+
+	iterations.Iteration()
 
 }
