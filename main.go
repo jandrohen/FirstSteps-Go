@@ -1,6 +1,7 @@
 package main
 
 import (
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
 	"fmt"
 	"runtime"
@@ -27,4 +28,7 @@ func main() {
 	default:
 		fmt.Printf("%s \n", os)
 	}
+
+	fmt.Println(exercices.TextToConverterAndValidateAHundred("100"))
+
 }
