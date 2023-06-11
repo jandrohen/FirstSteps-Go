@@ -7,11 +7,12 @@ import (
 	"strconv"
 )
 
-func MultiplicationOfTenTable() {
+func MultiplicationOfTenTable() string {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	var number int
 	var err error
+	var text string
 
 	fmt.Println("Insert a number to multiply by Ten: ")
 
@@ -27,6 +28,8 @@ func MultiplicationOfTenTable() {
 	}
 
 	for i := 1; i <= 10; i++ {
-		fmt.Printf("%d x %d = %d \n", number, i, number*i)
+		text += fmt.Sprintf("%d x %d = %d \n", number, i, number*i)
 	}
+
+	return text
 }

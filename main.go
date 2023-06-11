@@ -2,6 +2,7 @@ package main
 
 import (
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
 	"WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
@@ -38,4 +39,8 @@ func main() {
 	iterations.Iteration()
 
 	exercices.MultiplicationOfTenTable()
+
+	files.SaveTable()
+	files.AddTable()
+	files.ReadFile()
 }
