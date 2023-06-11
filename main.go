@@ -37,4 +37,5 @@ func main() {
 
 	iterations.Iteration()
 
+	exercices.MultiplicationOfTenTable()
 }
