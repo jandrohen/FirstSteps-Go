@@ -9,7 +9,9 @@ import (
 	// "fmt"
 	// "runtime"
 	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/maps"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/arrays_slices"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/maps"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
 )
 
 func main() {
@@ -56,5 +58,7 @@ func main() {
 
 	// arrays_slices.Capacity()
 
-	maps.ViewMaps()
+	// maps.ViewMaps()
+
+	users.CreateUser()
 }
