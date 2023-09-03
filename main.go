@@ -1,15 +1,15 @@
 package main
 
-import (
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
-	// "fmt"
-	// "runtime"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
-)
+import "WebstormProjects/UDEMY/GO/FirstSteps-GO/arrays_slices"
+
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
+// "fmt"
+// "runtime"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
 
 func main() {
 	// variables.ShowInt()
@@ -47,5 +47,11 @@ func main() {
 
 	// functions.Calculates()
 	// functions.CallClosure()
-	functions.Exponential(2)
+	// functions.Exponential(2)
+
+	// arrays_slices.ViewArrays()
+	// arrays_slices.ViewMatrix()
+	// arrays_slices.ViewSlice()
+
+	arrays_slices.Capacity()
 }
