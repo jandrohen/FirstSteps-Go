@@ -1,46 +1,51 @@
 package main
 
 import (
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
-	"fmt"
-	"runtime"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
+	// "fmt"
+	// "runtime"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
 )
 
 func main() {
-	variables.ShowInt()
-	variables.VariablesRest()
-	state, text := variables.TextToConverter(1880)
-	fmt.Println(state, text)
+	// variables.ShowInt()
+	// variables.VariablesRest()
+	// state, text := variables.TextToConverter(1880)
+	// fmt.Println(state, text)
 
-	if os := runtime.GOOS; os == "windows." || os == "OS X." {
-		fmt.Println("Esto no es Windows, es", os)
+	// if os := runtime.GOOS; os == "windows." || os == "OS X." {
+	// 	fmt.Println("Esto no es Windows, es", os)
 
-	} else {
-		fmt.Println("Esto es linux")
-	}
+	// } else {
+	// 	fmt.Println("Esto es linux")
+	// }
 
-	switch os := runtime.GOOS; os {
-	case "windows":
-		fmt.Println("Esto es Windows")
-	case "darwin":
-		fmt.Println("Esto es Darwin")
-	default:
-		fmt.Printf("%s \n", os)
-	}
+	// switch os := runtime.GOOS; os {
+	// case "windows":
+	// 	fmt.Println("Esto es Windows")
+	// case "darwin":
+	// 	fmt.Println("Esto es Darwin")
+	// default:
+	// 	fmt.Printf("%s \n", os)
+	// }
 
-	fmt.Println(exercices.TextToConverterAndValidateAHundred("100"))
+	// fmt.Println(exercices.TextToConverterAndValidateAHundred("100"))
 
-	keyboard.InsertNumbers()
+	// keyboard.InsertNumbers()
 
-	iterations.Iteration()
+	// iterations.Iteration()
 
-	exercices.MultiplicationOfTenTable()
+	// exercices.MultiplicationOfTenTable()
 
-	files.SaveTable()
-	files.AddTable()
-	files.ReadFile()
+	// files.SaveTable()
+	// files.AddTable()
+	// files.ReadFile()
+
+	// functions.Calculates()
+	functions.CallClosure()
+
 }
