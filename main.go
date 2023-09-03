@@ -46,6 +46,6 @@ func main() {
 	// files.ReadFile()
 
 	// functions.Calculates()
-	functions.CallClosure()
-
+	// functions.CallClosure()
+	functions.Exponential(2)
 }
