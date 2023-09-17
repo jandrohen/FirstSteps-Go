@@ -1,6 +1,9 @@
 package main
 
-import "WebstormProjects/UDEMY/GO/FirstSteps-GO/defer_panic"
+import (
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/goroutines"
+	"fmt"
+)
 
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
@@ -15,6 +18,7 @@ import "WebstormProjects/UDEMY/GO/FirstSteps-GO/defer_panic"
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
 // e "WebstormProjects/UDEMY/GO/FirstSteps-GO/exer_interfaces"
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/models"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/defer_panic"
 
 func main() {
 	// variables.ShowInt()
@@ -70,6 +74,12 @@ func main() {
 	// Maria := new(models.Woman)
 	// e.BreatheHumans(Maria)
 
-	defer_panic.ViewDefer()
-	defer_panic.ExamplePanic()
+	// defer_panic.ViewDefer()
+	// defer_panic.ExamplePanic()
+
+	go goroutines.MySlowName("Jandrohen")
+
+	fmt.Println("I am here")
+	var x string
+	fmt.Scanln(&x)
 }
