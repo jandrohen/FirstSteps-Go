@@ -77,9 +77,11 @@ func main() {
 	// defer_panic.ViewDefer()
 	// defer_panic.ExamplePanic()
 
-	go goroutines.MySlowName("Jandrohen")
-
+	channel1 := make(chan bool)
+	go goroutines.MySlowName("Jandrohen", channel1)
+	defer func() {
+		<-channel1
+	}()
 	fmt.Println("I am here")
-	var x string
-	fmt.Scanln(&x)
+
 }
