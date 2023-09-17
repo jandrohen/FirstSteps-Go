@@ -1,20 +1,20 @@
 package main
 
-import (
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
-	// "fmt"
-	// "runtime"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/arrays_slices"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/maps"
-	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
-	e "WebstormProjects/UDEMY/GO/FirstSteps-GO/exer_interfaces"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/models"
-)
+import "WebstormProjects/UDEMY/GO/FirstSteps-GO/defer_panic"
+
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/files"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/iterations"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/keyboard"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/variables"
+// "fmt"
+// "runtime"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/arrays_slices"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/maps"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
+// e "WebstormProjects/UDEMY/GO/FirstSteps-GO/exer_interfaces"
+// "WebstormProjects/UDEMY/GO/FirstSteps-GO/models"
 
 func main() {
 	// variables.ShowInt()
@@ -64,10 +64,12 @@ func main() {
 
 	// users.CreateUser()
 
-	Pepe := new(models.Man)
-	e.BreatheHumans(Pepe)
+	// Pepe := new(models.Man)
+	// e.BreatheHumans(Pepe)
 
-	Maria := new(models.Woman)
-	e.BreatheHumans(Maria)
+	// Maria := new(models.Woman)
+	// e.BreatheHumans(Maria)
 
+	defer_panic.ViewDefer()
+	defer_panic.ExamplePanic()
 }
