@@ -11,7 +11,9 @@ import (
 	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/functions"
 	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/arrays_slices"
 	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/maps"
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
+	// "WebstormProjects/UDEMY/GO/FirstSteps-GO/users"
+	e "WebstormProjects/UDEMY/GO/FirstSteps-GO/exer_interfaces"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/models"
 )
 
 func main() {
@@ -60,5 +62,12 @@ func main() {
 
 	// maps.ViewMaps()
 
-	users.CreateUser()
+	// users.CreateUser()
+
+	Pepe := new(models.Man)
+	e.BreatheHumans(Pepe)
+
+	Maria := new(models.Woman)
+	e.BreatheHumans(Maria)
+
 }
