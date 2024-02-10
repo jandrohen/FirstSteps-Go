@@ -1,7 +1,7 @@
 package main
 
 import (
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/webserver"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/middleware"
 )
 
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
@@ -83,6 +83,8 @@ func main() {
 	// }()
 	// fmt.Println("I am here")
 
-	webserver.MiWebServer()
+	// webserver.MiWebServer()
+
+	middleware.MyMiddleware()
 
 }
