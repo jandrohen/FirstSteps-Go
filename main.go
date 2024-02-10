@@ -1,8 +1,7 @@
 package main
 
 import (
-	"WebstormProjects/UDEMY/GO/FirstSteps-GO/goroutines"
-	"fmt"
+	"WebstormProjects/UDEMY/GO/FirstSteps-GO/webserver"
 )
 
 // "WebstormProjects/UDEMY/GO/FirstSteps-GO/exercices"
@@ -77,11 +76,13 @@ func main() {
 	// defer_panic.ViewDefer()
 	// defer_panic.ExamplePanic()
 
-	channel1 := make(chan bool)
-	go goroutines.MySlowName("Jandrohen", channel1)
-	defer func() {
-		<-channel1
-	}()
-	fmt.Println("I am here")
+	// channel1 := make(chan bool)
+	// go goroutines.MySlowName("Jandrohen", channel1)
+	// defer func() {
+	// 	<-channel1
+	// }()
+	// fmt.Println("I am here")
+
+	webserver.MiWebServer()
 
 }
