@@ -26,3 +26,9 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+  docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+    - name: docker build
+      run: docker build -t myapp . 
