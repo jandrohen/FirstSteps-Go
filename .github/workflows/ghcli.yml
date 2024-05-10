@@ -5,6 +5,11 @@ name: ghcli
 
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag with version Docker image'
+        required: true
+        default: latest
 
 jobs:
 
