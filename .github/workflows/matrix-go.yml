@@ -1,0 +1,29 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Matrix of configurations
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        goversion: [1.19, 1.20]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ matrix.goversion }}
+    - name: Restore dependencies
+      run: go mod download
+    - name: Build
+      run: go build -v -o myapp-${{ matrix.configuration }}-${{ matrix.goversion }}
