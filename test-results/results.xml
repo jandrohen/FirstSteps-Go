@@ -1,1 +1,12 @@
-# FirstSteps-Go
+<test-results>
+    <test-suite name="Test Suite 1">
+        <test-case name="Test Case 1" result="Passed" />
+        <test-case name="Test Case 2" result="Failed" />
+        <test-case name="Test Case 3" result="Passed" />
+    </test-suite>
+    <test-suite name="Test Suite 2">
+        <test-case name="Test Case 4" result="Passed" />
+        <test-case name="Test Case 5" result="Passed" />
+        <test-case name="Test Case 6" result="Passed" />
+    </test-suite>
+</test-results>
