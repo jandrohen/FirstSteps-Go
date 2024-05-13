@@ -1,0 +1,30 @@
+name: Context
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        goversion: [1.19.x, 1.20.x]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ matrix.goversion }}
+    - name: Restore dependencies
+      run: go mod download
+    - name: Build
+      run: go build -v -o myapp-${{ matrix.configuration }}-${{ matrix.goversion }}
+    - name: Information about actual job
+      run: echo ${{ job.status }}
+    - name: Information branch
+      run: echo ${{ github.ref }}
