@@ -1,0 +1,52 @@
+name: Github token
+
+on:
+  workflow_dispatch:
+    
+env:
+    SOLUTION_PATH: ./...
+    DOCKERFILE_PATH: .
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20'
+
+    - name: Build
+      run: go build -v $SOLUTION_PATH
+
+    - name: Test
+      run: go test -v $SOLUTION_PATH
+
+  docker:
+    name: Docker and build GO
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - uses: actions/checkout@v4
+    - name: docker build
+      run: docker build $DOCKERFILE_PATH -t jandronit/firststeps-go:${{ github.run_number }}
+
+    - uses: docker/login-action@v3
+      name: Docker login
+      with:
+            username: USUARIOINCORRECTO
+            password: PASSWORDINCORRECTO
+    
+    - name: Create issue with API REST
+      if: ${{ failure() }}
+      run: |
+        curl --request POST \
+        --url https://api.github.com/repos/${{ github.repository }}/issues \
+        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "title": "No se puede autenticar con Docker Hub",
+          "body": "Error en el workflow **${{ github.workflow }}**."
+          }' \
+        --fail
