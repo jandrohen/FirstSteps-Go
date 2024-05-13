@@ -1,0 +1,28 @@
+name: Expressions and functions
+
+on:
+    workflow_dispatch:
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        goversion: [1.19.x, 1.20.x]
+    runs-on: ubuntu-latest
+    env:
+     RESTORE_GO: go mod download   
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ matrix.goversion }}
+    - name: Restore dependencies
+      run: $RESTORE_GO
+    - name: Build
+      run: go build -v -o myapp-${{ matrix.configuration }}-${{ matrix.goversion }}
+    - name: Unit tests
+      run: go test ./...
+      if: ${{ contains(matrix.goversion, '1.19')}}  
