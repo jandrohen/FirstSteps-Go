@@ -1,0 +1,15 @@
+name: 'Name of the person Stars Wars'
+description: 'Return the name of the person'
+inputs:
+  person_id:
+    description: 'ID of the person'
+    required: true
+    default: 1
+outputs:
+  person_name:
+    description: 'Name of the person'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.person_id}}
