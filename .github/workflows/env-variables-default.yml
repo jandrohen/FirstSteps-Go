@@ -1,0 +1,10 @@
+name: Environment Variables default
+on:
+    workflow_dispatch:
+
+jobs:
+    show:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show all environment variables
+              run: echo ${{ toJson(env) }}
